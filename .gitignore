@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python & ML caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
