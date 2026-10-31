@@ -1,4 +1,4 @@
-# ⚙️ EquipAware
+# EquipAware
 
 > **Industrial IoT Equipment Health Monitoring & Predictive Maintenance Platform**
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 **EquipAware** is an Industrial Internet of Things (IIoT) monitoring and predictive maintenance platform engineered to eliminate unplanned machinery downtime.
 
@@ -18,7 +18,7 @@ By synthesizing real-time telemetry (vibration, operating temperature, multi-axi
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart LR
@@ -32,7 +32,7 @@ flowchart LR
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - **Real-Time Telemetry Dashboard:** Modern UI displaying active machines, temperature, vibration indices, and operational status (`Operational`, `Warning`, `Critical`).
 - **Predictive Failure Scoring:** Python/Flask inference engine evaluating multi-parameter degradation curves to calculate remaining useful life and failure probabilities.
@@ -42,7 +42,7 @@ flowchart LR
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 equipaware/
@@ -75,7 +75,7 @@ equipaware/
 
 ---
 
-## 🗄️ Database Schema (`sql/schema.sql`)
+## Database Schema (`sql/schema.sql`)
 
 - **`machines`**: Registry of plant machinery (`id`, `name`, `location`).
 - **`sensor_readings`**: High-frequency telemetry log (`machine_id`, `sensor1`, `sensor2`, `temperature`, `vibration`, `timestamp`).
@@ -83,7 +83,7 @@ equipaware/
 
 ---
 
-## ⚡ Quick Start & Installation
+## Quick Start & Installation
 
 ### 1. Prerequisites
 - **Node.js:** v18.0.0 or later
@@ -128,7 +128,7 @@ The ML API will run on `http://127.0.0.1:5000/predict`.
 
 ---
 
-## 📡 Predictive ML API
+## Predictive ML API
 
 **Endpoint:** `POST /predict`
 
@@ -153,17 +153,17 @@ The ML API will run on `http://127.0.0.1:5000/predict`.
 
 ---
 
-## 📱 Telegram Alert Integration
+## Telegram Alert Integration
 
 When failure risk exceeds safe operational thresholds:
 1. The dashboard invokes the Supabase Edge Function `send-telegram`.
 2. The function triggers the Telegram Bot API:
    ```
-   🚨 High risk detected for Hydraulic Press C2! Immediate inspection required.
+    High risk detected for Hydraulic Press C2! Immediate inspection required.
    ```
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
